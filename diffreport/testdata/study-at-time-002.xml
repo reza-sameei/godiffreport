@@ -1,0 +1,35 @@
+<Study OID="S">
+    <MetaDataVersion OID="M" Name="MetaDataVersion_v1.0.0-S_101">
+        <!-- Include StudyOID="S_THEJUNOD" MetaDataVersionOID="v1.0.0"/ -->
+        <Protocol>
+            <StudyEventRef StudyEventOID="SE_INITIALVISIT" OrderNumber="1" Mandatory="Yes"/>
+        </Protocol>
+        <StudyEventDef OID="SE_INITIALVISIT" Name="Initial Visit" Repeating="No" Type="Scheduled">
+            <FormRef FormOID="F_LOCALLABORAT_V10" Mandatory="Yes"/>
+        </StudyEventDef>
+        <FormDef OID="F_LOCALLABORAT_V10" Name="Local Laboratory Results - V1.0" Repeating="No">
+            <ItemGroupRef ItemGroupOID="IG_LOCAL_TESTS" Mandatory="Yes"/>
+        </FormDef>
+        <ItemGroupDef OID="IG_LOCAL_TESTS" Name="Tests" Repeating="No" SASDatasetName="TESTS">
+            <ItemRef ItemOID="I_DIABE_OTHER_DIABETIC_NEUROPATHY_M" OrderNumber="1" Mandatory="No"/>
+        </ItemGroupDef>
+        <ItemDef OID="I_DIABE_OTHER_DIABETIC_NEUROPATHY_M" Name="OTHER_DIABETIC_NEUROPATHY_MHOCCUR" DataType="text" Length="1" SASFieldName="OTHER_DI" Comment="Other diabetic neuropathy">
+            <Question>
+                <TranslatedText>Other diabetic neuropathy:</TranslatedText>
+            </Question>
+            <CodeListRef CodeListOID="CL_18"/>
+        </ItemDef>
+        <CodeList OID="CL_18" Name="Y_N" DataType="text" SASFormatName="$Y_N">
+            <CodeListItem CodedValue="Y">
+                <Decode>
+                    <TranslatedText>Yes</TranslatedText>
+                </Decode>
+            </CodeListItem>
+            <CodeListItem CodedValue="N">
+                <Decode>
+                    <TranslatedText>NOOOO WAY !</TranslatedText>
+                </Decode>
+            </CodeListItem>
+        </CodeList>
+    </MetaDataVersion>
+</Study>

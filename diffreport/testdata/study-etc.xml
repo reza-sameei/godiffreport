@@ -1,0 +1,16 @@
+<Study OID="S">
+    <GlobalVariables>
+        <StudyName>The JUNO Diabetes Study - Site A</StudyName>
+        <StudyDescription>The purpose of this study is to evaluate the safety and efficacy of JUNO in the treatment of
+            Type 2 diabetes mellitus (T2DM). - Site A: 101
+        </StudyDescription>
+        <ProtocolName>JUNO - 101</ProtocolName>
+    </GlobalVariables>
+    <BasicDefinitions>
+        <MeasurementUnit OID="MU_DDMMMYYYY" Name="(DD-MMM-YYYY)">
+            <Symbol>
+                <TranslatedText>(DD-MMM-YYYY)</TranslatedText>
+            </Symbol>
+        </MeasurementUnit>
+    </BasicDefinitions>
+</Study>
